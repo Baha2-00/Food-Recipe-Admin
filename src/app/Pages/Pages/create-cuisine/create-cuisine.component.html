@@ -1,0 +1,20 @@
+<!-- Section: Design Block -->
+<app-navbar></app-navbar>
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Cuisine Title</label>
+    <input type="text" class="form-control"
+    [(ngModel)]="input.title" name="title"
+    id="exampleFormControlInput1" >
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Cuisine Image</label>
+    <input type="file" class="form-control" (change)="onFileSelected($event)" id="exampleFormControlInput1">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Description</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="input.description" name="description" rows="3"></textarea>
+  </div>
+  <button (click)="SaveInfo()" class="btn btn-outline-primary" style="text-align: center; margin-left: 400px;">Save</button>
+
+</form>

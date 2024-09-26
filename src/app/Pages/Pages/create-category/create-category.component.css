@@ -1,0 +1,21 @@
+form {
+    width: 70%;
+    padding: 15px;
+    margin-left: 85px;
+    text-align: left;
+}
+input {
+    margin: 20px;
+}
+
+textarea {
+    margin: 20px;
+}
+button{
+    margin-left: 600px;
+    text-align: center;
+    justify-content: center;
+}
+label{
+    text-align: left;
+}

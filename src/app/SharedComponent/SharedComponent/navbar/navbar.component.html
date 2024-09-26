@@ -1,0 +1,58 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-body-tertiary">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" [routerLink]="'/Admin-Details'">
+            <img src="../../../../assets/Img/YumYumLogo.png"
+                 alt="Logo" class="img-fluid" style="height: 50px; width: 90px;" />
+        </a>
+
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'/Admin-Details'">User Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'/Category'">Manage Category</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'/Cuisine'">Manage Cuisine</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'/Dish'">Manage Dish</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'/Users'">Manage Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="'/Dish-Approve'">Manage Dishes Approve</a>
+                </li>
+            </ul>
+            <!-- Left links -->
+
+            <div class="d-flex">
+                <button type="button" class="btn btn-primary me-3" [routerLink]="'/SignIn'" 
+                        *ngIf="!IsloggedIn">
+                    Login
+                </button>
+                <button type="button" class="btn btn-primary me-3" (click)="Logout()"
+                        *ngIf="IsloggedIn">
+                    Logout
+                </button>
+            </div>
+        </div>
+        <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->

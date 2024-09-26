@@ -1,0 +1,19 @@
+<form>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Category Title</label>
+      <input type="email" class="form-control"
+      [(ngModel)]="data.title" name="title"
+      id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Category Image</label>
+      <input type="file" class="form-control" (change)="onFileSelected($event)" id="exampleFormControlInput1">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Description</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="data.description" name="article" rows="3"></textarea>
+    </div>
+    
+    <button (click)="SaveInfo()" class="btn btn-outline-primary">Save</button>
+  
+  </form>

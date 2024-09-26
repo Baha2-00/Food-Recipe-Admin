@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+
+<div class="col-mid-12">
+  <form>
+  <div class="form-header">
+  <h2>Create Dish</h2>
+  </div>
+  <div class="form-body">
+  <fieldset>
+  <legend><i class="fa fa-cutlery"></i> Dish Information</legend>
+  <label for="fname">Name</label>
+  <input type="text" id="fname" [(ngModel)]="input.name" name="name" >
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Description</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="input.description" name="description" rows="3"></textarea>
+  </div>
+  <label for="address">Image</label>
+  <input type="file" id="address" (change)="onFileSelected($event)" name="image" >
+  <div class="form-group">
+    <label>Category</label>
+    <select name="CategoryID" [(ngModel)]="input.categoryId">
+      <option value="0">-Select-</option>
+      <option *ngFor="let cate of Category" [value]="cate.id">{{cate.title}}</option>
+    </select>
+</div>
+
+<div class="form-group">
+  <label>Cuisine</label>
+  <select name="CuisineID" [(ngModel)]="input.cuisineId">
+    <option value="0">-Select-</option>
+    <option *ngFor="let cuis of Cusine" [value]="cuis.id">{{cuis.title}}</option>
+  </select>
+</div>
+
+<br>
+
+  <legend><i class="fa fa-cutlery"></i> Ingredients Information</legend>
+  <label for="fname">Ingredients</label>
+  <input type="text" id="fname" [(ngModel)]="input.ingredientName" name="ingredientName" placeholder="Add all ingredients onetime">
+  <br>
+  <label for="fname">Quantity</label>
+  <input type="text" id="fname" [(ngModel)]="input.quantity" name="quantity" placeholder="Add all Quantities with ingredient name">
+  <br>
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Description</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" [(ngModel)]="input.preparingStepsDescription" name="preparingStepsDescription" rows="3"></textarea>
+  </div>
+  <button (click)="SaveInfo()" class="btn btn-success">Save</button>
+  </fieldset>
+  </div>
+  </form>
+  </div>
+  
